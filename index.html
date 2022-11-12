@@ -30,9 +30,15 @@
         <a class="logo" href=""><span class="logo-header">Web</span>Studio</a>
         <nav class="nav-item">
          <ul class="site-nav list">
-            <li><a href="" class="link current">Студія</a></li>
-            <li><a href="./portfolio.html" class="link">Портфоліо</a></li>
-            <li><a href="" class="link">Контакти</a></li>
+            <li class="menu-item">
+              <a href="" class="link current menu-link">Студія</a>
+            </li>
+            <li>
+              <a href="./portfolio.html" class="link">Портфоліо</a>
+            </li>
+            <li>
+              <a href="" class="link">Контакти</a>
+            </li>
          </ul>
         </nav>
 
@@ -57,7 +63,7 @@
     <section class="hero overlay">
       <div class="container">
         <h1 class="hero-header">Ефективні рішення для вашого бізнесу</h1>
-        <button class="hero-button" type="button">Замовити послугу</button>
+        <button class="hero-button" type="button" data-modal-open>Замовити послугу</button>
       </div>
     </section>
 
@@ -111,9 +117,24 @@
         <div class="container">
           <h2 class="work-title">Чим ми займаємося</h2>
           <ul class="list work-img">
-            <li><img class="item" src="./images/box/box1.jpg" alt="розробка" width="370" height="294"></li>
-            <li><img class="item" src="./images/box/box2.jpg" alt="універсальність" width="370" height="294"></li>
-            <li><img class="item" src="./images/box/box3.jpg" alt="дизайн" width="370" height="294"></li>
+            <li class="owerlay">
+              <img class="item" src="./images/box/box1.jpg" alt="розробка" width="370" height="294">
+              <div class="work-owerlay">
+                <p class="work-owerlay-text">Десктопні додатки</p>
+              </div>
+            </li>
+            <li class="owerlay">
+              <img class="item" src="./images/box/box2.jpg" alt="універсальність" width="370" height="294">
+              <div class="work-owerlay">
+                <p class="work-owerlay-text">Мобільні додатки</p>
+              </div>
+            </li>
+            <li class="owerlay">
+              <img class="item" src="./images/box/box3.jpg" alt="дизайн" width="370" height="294">
+              <div class="work-owerlay">
+                <p class="work-owerlay-text">Дизайнерські рішення</p>
+              </div>
+            </li>
           </ul>
         </div>
       </section>
@@ -408,6 +429,20 @@
 
     </div>
   </footer>
+
+ <!-- Modal window -->
+ <div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button class="modal-buttom" data-modal-close>
+      <svg class="modal-item"  width="18px" height="18px">
+        <use href="./images/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+  </div>
+ </div>
+
+ <script src="./js/modal.js"></script>
+
 </body>
 
 </html>
